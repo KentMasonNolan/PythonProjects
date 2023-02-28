@@ -16,12 +16,7 @@ WORDLIST_FILENAME = "words.txt"
 
 
 def load_words():
-    """
-    Returns a list of valid words. Words are strings of lowercase letters.
 
-    Depending on the size of the word list, this function may
-    take a while to finish.
-    """
     # print("Loading word list from file...")
     # inFile: file
     inFile = open(WORDLIST_FILENAME, 'r')
@@ -55,10 +50,10 @@ def is_word_guessed(secret_word, letters_guessed):
     secret_word = list(secret_word)
 
     for letters in secret_word:
-        if bool(letters in letters_guessed) == False:
-            return (False)
+        if not bool(letters in letters_guessed):
+            return False
         else:
-            return (True)
+            return True
 
 
 def get_guessed_word(secret_word, letters_guessed):
@@ -67,13 +62,13 @@ def get_guessed_word(secret_word, letters_guessed):
 
     for letters in secret_word:
 
-        if bool(letters in letters_guessed) == False:
+        if not bool(letters in letters_guessed):
             secret_word[n] = '_ '
         else:
             secret_word[n] = letters
         n += 1
     secret_word = ''.join([str(elem) for elem in secret_word])
-    return (secret_word)
+    return secret_word
 
 
 def get_available_letters(letters_guessed):
@@ -83,7 +78,7 @@ def get_available_letters(letters_guessed):
 
     for letters in alphabet:
 
-        if bool(letters in letters_guessed) == True:
+        if bool(letters in letters_guessed):
             alphabet.pop(n)
         n += 1
     alphabet = ''.join([str(elem) for elem in alphabet])
