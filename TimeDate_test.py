@@ -7,17 +7,23 @@ year = 2023
 x = datetime.now()
 y = datetime(year, month, day)
 
-friday = False
-while friday == False:
-    y = datetime(year, month, day)
-    if month == 12:
-        month = 1
-    else:
-        month += 1
-    if y.strftime("%A") == "Friday":
-        print("Friday the 13th will happen on: ")
-        print(str(y))
-        friday = True
+print(y)
+
+y = y+timedelta(days=28)
+
+print(y)
+
+# friday = False
+# while friday == False:
+#     y = datetime(year, month, day)
+#     if month == 12:
+#         month = 1
+#     else:
+#         month += 1
+#     if y.strftime("%A") == "Friday":
+#         print("Friday the 13th will happen on: ")
+#         print(str(y))
+#         friday = True
     # print(y.strftime("%A"))
 
 # print(x.year)

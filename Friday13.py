@@ -1,21 +1,31 @@
 from datetime import datetime, timedelta
 
-day = 13
-month = 4
-year = 2023
+def friday_the_13th():
 
-y = datetime.now()
+    y = datetime.now()
+    # y = datetime(2025, 6, 12)
 
-y = datetime(year, month, day)
+    isFriday = False
+    day = y.day
+    month = y.month
+    year = y.year
 
-friday = False
-while friday == False:
-    y = datetime(year, month, day)
-    if month == 12:
-        month = 1
+    if day < 13:
+        day = 13
     else:
+        day = 13
         month += 1
-    if y.strftime("%A") == "Friday":
-        print("Friday the 13th will happen on: ")
-        print(y.strftime("%Y-%m-%d"))
-        friday = True
+
+    y = datetime(year, month, day)
+
+    while isFriday == False:
+        day = 13
+        y = datetime(y.year, y.month, day)
+        if y.strftime("%A") == "Friday":
+            print(y.strftime("%Y-%m-%d"))
+            isFriday = True
+            return y.strftime("%Y-%m-%d")
+        else:
+            y = y + timedelta(days=22)
+
+friday_the_13th()
