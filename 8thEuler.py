@@ -8,9 +8,10 @@ euler = [x for x in str(line)]
 print(euler)
 
 largestProduct = 0
-for i in range(len(euler)-4):
-
-    currentProduct = int(euler[i]) * int(euler[i+1]) * int(euler[i+2]) * int(euler[i+3])
+for i in range(len(euler)-13):
+    currentProduct = int(euler[i])
+    for j in range(12):
+        currentProduct = currentProduct * int(euler[i+j])
 
     if currentProduct > largestProduct:
         largestProduct = currentProduct
