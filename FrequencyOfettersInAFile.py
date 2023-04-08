@@ -5,7 +5,12 @@ TotalCount = 0
 
 for words in line:
     for characters in words:
-        print(ord(characters))
-        TotalCount += 1
+        if ord(characters) >= 97 & ord(characters) <= 122:
+            # print(ord(characters))
+            TotalCount += 1
 
 print(TotalCount)
+a = "a"
+b = "z"
+print(ord(a))
+print(ord(b))
