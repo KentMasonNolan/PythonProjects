@@ -3,7 +3,7 @@ line = INFILE.readline()
 euler = [[None]*20]*20
 for i in range(20):
     for j in range(20):
-        euler[i][j] = line.split(' ')
+        euler[i][j] = line.strip().split(' ')
 
     # euler[i] = int,x.strip().split(' ') for x in line
 
