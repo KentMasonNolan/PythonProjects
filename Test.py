@@ -14,5 +14,5 @@ def isPrime(n):
 for x in range(222281, 222381):
     b = ((bin(x)).count("1"))
     if isPrime(b):
-        print(x )
+        print(x)
 
