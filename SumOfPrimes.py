@@ -1,18 +1,20 @@
+def sum_primes(n):
+    total = 0
+
+    for j in range(0, n):
+        if isPrime(j):
+            total += j
+    print(total)
+    return total
+
 
 def isPrime(n):
+    if n <= 1:
+        return False
     for i in range(2, int(n ** 0.5) + 1):
         if n % i == 0:
             return False
-
-    # print(n)
-    # print("true")
+    print("true")
     return True
 
-# isPrime(3)
-
-
-for x in range(222281, 222381):
-    b = ((bin(x)).count("1"))
-    if isPrime(b):
-        print(x )
-
+isPrime(2)
