@@ -11,9 +11,9 @@ letters = list(ascii_lowercase)
 
 j = 97
 
-for i in range(97, 150):
-    print(chr(j))
-    j +=1
-    if j%123==0:
-        j=97
+# for i in range(97, 150):
+#     print(chr(j))
+#     j +=1
+#     if j%123==0:
+#         j=97
 
