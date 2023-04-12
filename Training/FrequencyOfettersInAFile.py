@@ -1,4 +1,4 @@
-INFILE = open("words.txt", 'r')
+INFILE = open("../Basics/words.txt", 'r')
 line = INFILE.readline()
 wordlist = line.split()
 
