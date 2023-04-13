@@ -5,7 +5,7 @@ letters = list(ascii_lowercase)
 
 def caesar_cypher_encrypt(s, key):
     output = ""
-    for x in list(s):
+    for x in s:
 
         if 65 <= ord(x) + key <= 90:
             # print(chr(ord(x) + key))
