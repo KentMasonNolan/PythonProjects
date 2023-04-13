@@ -49,6 +49,10 @@ def caesar_cypher_decrypt(s, key):
             y = (ord(x) % 90) + 65
             output += chr(y)
             continue
+        elif ord(x) - key <= 65:
+            y = 90 - abs((ord(x) - key) - 65)
+            output += chr(y)
+            continue
         elif 65 >= ord(x) <= 90 and 97 >= ord(x) <= 122:
             output += x
             continue
