@@ -32,10 +32,22 @@ largestSum = 0
 
 #left and right
 for i in range(20):
-    for j in range(16):
+    for j in range(17):
         total = grid[i][j] * grid[i][j+1] * grid[i][j+2] * grid[i][j+3]
         if total > largestSum:
             largestSum = total
 
+#down right
+for i in range(17):
+    for j in range(17):
+        total = grid[i][j] * grid[i+1][j + 1] * grid[i+2][j + 2] * grid[i+3][j + 3]
+        if total > largestSum:
+            largestSum = total
+
+for i in range(17):
+    for j in range(17):
+        total = grid[i][j] * grid[i+1][j + 1] * grid[i+2][j + 2] * grid[i+3][j + 3]
+        if total > largestSum:
+            largestSum = total
 
 print(largestSum)
