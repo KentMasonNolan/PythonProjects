@@ -19,7 +19,7 @@ euler= """08 02 22 97 38 15 00 40 00 75 04 05 07 78 52 12 50 77 91 08
 20 73 35 29 78 31 90 01 74 31 49 71 48 86 81 16 23 57 05 54
 01 70 54 71 83 51 54 69 16 92 33 48 61 43 52 01 89 19 67 48"""
 grid = euler.split("\n")
-print(len(grid))
+# print(len(grid))
 for a in range(0, len(grid)):
     i=grid[a]
     i=i.split(" ")
@@ -28,8 +28,14 @@ for a in range(0, len(grid)):
         i[b]=int(i[b])
         grid[a]=i
 
-print(grid)
+largestSum = 0
+
+#left and right
+for i in range(20):
+    for j in range(16):
+        total = grid[i][j] * grid[i][j+1] * grid[i][j+2] * grid[i][j+3]
+        if total > largestSum:
+            largestSum = total
 
 
-# for i in line:
-#     euler.append()
+print(largestSum)
