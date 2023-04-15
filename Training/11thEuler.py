@@ -48,7 +48,7 @@ for i in range(17):
 #down left
 for i in range(17):
     for j in range(3,20):
-        total = grid[i][j] * grid[i-1][j - 1] * grid[i-2][j - 2] * grid[i-3][j - 3]
+        total = grid[i][j] * grid[i+1][j - 1] * grid[i+2][j - 2] * grid[i+3][j - 3]
         if total > largestSum:
             largestSum = total
 
