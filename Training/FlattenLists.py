@@ -1,9 +1,8 @@
 def flatten(a_list):
     outputList = []
-    for i in range(len(a_list)):
-        for j in range(len(a_list[i])):
-
-            outputList.append(a_list[i][j])
+    for i in a_list:
+        for j in i:
+            outputList.append(j)
     print(outputList)
     return outputList
 
