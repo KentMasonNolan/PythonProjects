@@ -8,6 +8,7 @@ def flatten(a_list):
     return outputList
 
 
-g = [[1, 2, 4], [], [1, 2, 3, 4], [2, 3, 4, 5]]
+g = [[1, 2, 4], [[6]], [1, 2, 3, 4], [2, 3, 4, 5]]
 
 
+flatten(g)
