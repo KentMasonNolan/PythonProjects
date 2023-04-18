@@ -82,6 +82,7 @@ def get_available_letters(letters_guessed):
             alphabet.pop(n)
         n += 1
     alphabet = ''.join([str(elem) for elem in alphabet])
+    print(alphabet)
     return (alphabet)
 
 
