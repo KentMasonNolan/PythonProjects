@@ -3,12 +3,12 @@ import numpy as np
 
 
 def selectionSort(inputList):
-    sorted = False
+    sortedComplete = False
     finalIndex = len(inputList) - 1
     startIndex = 0
 
-    while not sorted:
-        sorted = True
+    while not sortedComplete:
+        sortedComplete = True
 
         while finalIndex != 1:
             for i in range(finalIndex):
