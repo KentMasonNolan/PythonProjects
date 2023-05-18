@@ -15,6 +15,7 @@ class SLinkedList:
             printval = printval.nextval
 
 
+
 list = SLinkedList()
 list.headval = Node("Mon")
 e2 = Node("Tue")
